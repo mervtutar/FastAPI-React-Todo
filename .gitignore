@@ -3,3 +3,5 @@
 /backend/__pycache__
 /frontend/todo-app/node_modules
 git
+frontend/todo-app/package-lock.json
+frontend/todo-app/package.json
