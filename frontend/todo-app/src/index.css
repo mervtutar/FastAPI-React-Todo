@@ -1,11 +1,11 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f9;
-  display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
+  display: flex;
 }
 
 .container {
@@ -31,6 +31,7 @@ input[type="text"] {
   border: 1px solid #ddd;
   border-radius: 8px;
   outline: none;
+
 }
 
 button {
@@ -66,4 +67,11 @@ ul li {
 
 ul li:hover {
   background-color: #d4d4d4;
+}
+
+.delete-btn{
+  cursor: pointer;
+  border: none;
+  background-color: red;
+  color: white;
 }
