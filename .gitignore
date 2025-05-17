@@ -5,3 +5,4 @@
 git
 frontend/todo-app/package-lock.json
 frontend/todo-app/package.json
+/frontend/todo-app/public
