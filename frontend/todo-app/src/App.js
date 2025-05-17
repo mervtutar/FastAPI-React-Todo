@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import axios from "axios"
+import axios from "axios" // istek atmak için kullanılacak
+
 function App() {
 
   const [value, setValue] = useState("") // value: Kullanıcının input'a girdiği metni tutar
@@ -20,6 +21,24 @@ function App() {
 
   }
 
+  function deleteTodo(id){
+
+    if (!window.confirm("silmek istediginizden emin misiniz?")){
+      return
+    }
+
+    axios
+    .delete(`http://127.0.0.1:8000/todos/${id}`)
+    .then(()=> fetchTodos())
+  }
+
+  function updateTodo(id, e){
+    e.preventDefault()
+
+    axios.put(`http://127.0.0.1:8000/todos/${id}`, {title: e.target[0].value})
+    .then(() => fetchTodos())
+  }
+
 
   // Başlangıçta Listeyi Çekme (useEffect)
   useEffect(()=> {
@@ -37,9 +56,28 @@ function App() {
 
       <div>
         <ul className="todo-list">
-          {todos.map(todo => (
+          {todos.map(todo => ( // todos adlı dizi üzerinde gezinir
             <li key={todo.id} className="todo-item">
-              {todo.title}
+              
+              <form onSubmit={(e) => updateTodo(todo.id, e)}>
+                <input defaultValue={todo.title}/>
+                  <div>
+
+                    <button type="submit" className="update-btn">
+                      kaydet
+                    </button>
+
+                    <button className="delete-btn" onClick={() => deleteTodo(todo.id)}>
+                      sil
+                    </button>
+
+
+                  </div>
+
+
+              </form>
+          
+              
             </li>
           ))}
         </ul>
