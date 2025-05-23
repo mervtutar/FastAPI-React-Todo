@@ -5,7 +5,7 @@ A simple, full-stack Todo application with:
 - 💻 **Frontend:** React (JavaScript)
 - 🐳 **Easy development & deployment using Docker Compose**
 
-![ss](https://github.com/user-attachments/assets/6baa02a6-fee0-47a8-bd4d-b3036036ae77)
+<img src="https://github.com/user-attachments/assets/33f01ccd-acdf-41a3-a806-dd6f04319c66" width="400"/>
 
 ---
 
