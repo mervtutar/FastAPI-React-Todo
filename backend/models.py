@@ -8,8 +8,3 @@ class Todo(Base):
     title = Column(String)
 
 
-
-
-
-
-
