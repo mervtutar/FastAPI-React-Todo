@@ -59,7 +59,7 @@ Follow these steps to run the project locally using Docker:
 ## 🛠️ Manual Run (Without Docker)
 
 If you want to run the backend or frontend manually (without Docker):
-**Backend (FastAPI):**
+Backend (FastAPI):
 ```bash
 cd backend
 python -m venv venv
